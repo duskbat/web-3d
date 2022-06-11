@@ -58,7 +58,7 @@ export default {
           childrenList = [];
           pointsParam.push(childrenList);
         }
-        childrenList.push(new THREE.Vector3(minuteOffset / 5, glucose[i].y, zOffset));
+        childrenList.push(new THREE.Vector3(minuteOffset / 5, 5 * glucose[i].y, zOffset));
         lastMinuteOffset = minuteOffset;
       }
 
@@ -80,7 +80,7 @@ export default {
       }
 
 
-      const geometry = new THREE.BoxGeometry(1, 1, 1);
+      const geometry = new THREE.BoxGeometry(5, 5, 5);
       const material = new THREE.MeshNormalMaterial();
       const cube = new THREE.Mesh(geometry, material);
       cube.position.y = 5;
